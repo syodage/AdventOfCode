@@ -19,3 +19,7 @@ func ReadLines(filePath string) ([]string, error) {
 	}
 	return inputs, nil
 }
+
+func RuneSep(c rune) bool {
+	return c == ' '
+}
