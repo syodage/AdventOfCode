@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func ReadLines(filePath string) ([]string, error) {
@@ -23,6 +24,10 @@ func ReadLines(filePath string) ([]string, error) {
 
 func RuneSep(c rune) bool {
 	return c == ' '
+}
+
+func SplitBySpaces(in string) []string {
+	return strings.FieldsFunc(in, RuneSep)
 }
 
 func ToInts(s []string) ([]int, error) {
